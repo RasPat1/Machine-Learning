@@ -1,0 +1,392 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cas",
+				"caseEnd"
+			],
+			[
+				"base",
+				"baseArray"
+			],
+			[
+				"start",
+				"startPos"
+			],
+			[
+				"stat",
+				"startPos"
+			],
+			[
+				"digi",
+				"digitArray"
+			],
+			[
+				"largest",
+				"largestBase"
+			],
+			[
+				"magic",
+				"magicValue"
+			],
+			[
+				"s",
+				"smallest"
+			],
+			[
+				"ca",
+				"caseStart"
+			],
+			[
+				"prit",
+				"print_r"
+			],
+			[
+				"next",
+				"nextSmallestMN"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"dig",
+				"digSums"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"xla",
+				"xlabel"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"selected_items":
+		[
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"mv",
+				"Quick File Move: Move Current File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP 5"
+			],
+			[
+				"linter",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"matla",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"mat",
+				"Set Syntax: MATLAB"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/A-small-practice.out",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/large_stats.txt",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/out.txt",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/A-small-practice.in",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/out1.txt",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/A-large-practice.in",
+		"/C/Users/RasPat/Dev/GCodejam/2009_1A/A.php",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/A1.php",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/A-large-practice.out",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/Happiness.php",
+		"/C/Users/RasPat/AppData/Local/Temp/Temp1_GoodSoft_0_1.zip/A.php",
+		"/C/Users/RasPat/AppData/Local/Temp/Temp1_TripleM_0_1.zip/A.java",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_1A/scrachPad.txt",
+		"/C/Users/RasPat/Dev/GCodeJam/2009_QR/A-small-practice.out",
+		"/C/Users/RasPat/Dev/GCodeJam/2008_1A/A-small-practice.out",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/featureNormalize.m",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/ex1.m",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/computeCost.m",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/gradientDescent.m",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/warmUpExercise.m",
+		"/C/Users/RasPat/Coursera/MachineLearning/mlclass-ex1-005/mlclass-ex1/plotData.m"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"small",
+			"large",
+			"11814485",
+			"small",
+			"base",
+			"digitArray",
+			"large",
+			"smallestBase",
+			"large",
+			"small",
+			"large",
+			"small",
+			"largestBase",
+			"large",
+			"string",
+			"small",
+			"large",
+			"small",
+			"large",
+			"small",
+			"large",
+			"small",
+			"large",
+			"small",
+			"large",
+			"small",
+			"true",
+			"microtime",
+			"prin",
+			"array",
+			"isMagic",
+			"print",
+			"start",
+			"print_r",
+			"exit",
+			"expression",
+			"true",
+			"nextNum",
+			"tobase",
+			"frombase",
+			"number",
+			"echo",
+			"1",
+			"3",
+			"2",
+			"diff",
+			"sync"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.590710456437,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"out1",
+				"2009_1A/out1.txt"
+			],
+			[
+				"out",
+				"2009_1A/out.txt"
+			],
+			[
+				"larges",
+				"2009_1A/large_stats.txt"
+			],
+			[
+				"scrat",
+				"2009_1A/scrachPad.txt"
+			],
+			[
+				"2009_1a/a-",
+				"2009_1A/A-large-practice.in"
+			],
+			[
+				"alar",
+				"2009_1A/A-large-practice.out"
+			],
+			[
+				"2009asmall",
+				"2009_1A/A-small-practice.out"
+			],
+			[
+				"asmall",
+				"2008_1A/A-small-practice.out"
+			],
+			[
+				"2009small",
+				"2009_1A/A-small-practice.in"
+			],
+			[
+				"happin",
+				"2009_1A/Happiness.php"
+			],
+			[
+				"compucost",
+				"mlclass-ex1/computeCost.m"
+			],
+			[
+				"comp",
+				"mlclass-ex1/computeCostMulti.m"
+			],
+			[
+				"t",
+				"mlclass-ex1/ex1data2.txt"
+			],
+			[
+				"feature",
+				"mlclass-ex1/featureNormalize.m"
+			],
+			[
+				"ex",
+				"mlclass-ex1/ex1_multi.m"
+			],
+			[
+				"grad",
+				"mlclass-ex1/gradientDescent.m"
+			],
+			[
+				"computecost",
+				"mlclass-ex1/computeCost.m"
+			],
+			[
+				"ex1",
+				"mlclass-ex1/ex1.m"
+			],
+			[
+				"warm",
+				"mlclass-ex1/warmUpExercise.m"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 70.0,
+	"status_bar_visible": true
+}
