@@ -40,16 +40,14 @@ Theta2_grad = zeros(size(Theta2));
 %         computed in ex4.m
 %
 
-
+% Add input bias to X
 X = [ones(size(X, 1), 1) X];
 
-% Add input bias to X
 z2 = Theta1 * X';
 a2 = sigmoid(z2);
 z3 = Theta2 * [ones(size(a2, 2), 1) a2']';
 a3 = sigmoid(z3);
 h = a3;
-
 yJ = [y==1];
 for i = 2:size(h, 1)
 	yJ = [yJ y==i];
@@ -75,9 +73,9 @@ term1 = -1 * yJ * log(h);
 term2 = (1 - yJ) * log(1 - h);
 inner = term1 - term2;
 
-trace rather than sum
-inner has every training example graded against every result
-We only want ex1 vs result 1 and 2 v 2 so take the diagnoal only. 
+% trace rather than sum
+% inner has every training example graded against every result
+% We only want ex1 vs result 1 and 2 v 2 so take the diagnoal only. 
 
 J = trace(inner) / m;
 
@@ -97,6 +95,61 @@ J = trace(inner) / m;
 %               over the training examples if you are implementing it for the 
 %               first time.
 %
+
+% Return Theta1_grad and Theta2_grad
+
+
+% yJ is y converted to column vectors for each expected result
+
+%precompute sigGrad for each layer
+% sG2 = sigmoidGradient(z2);
+
+D_1 = 0;
+D_2 = 0;
+
+Theta2BP = Theta2(1:end, 2:end); 
+
+for t = 1:m
+% 	% X is already modified with a bias layer Just pull it out
+	a_1 = X(t, 1:end)'
+	% size(a_1)	% 401 x 1
+
+	z_2 = Theta1 * a_1;
+	a_2 = sigmoid(z_2);
+	z_3 = Theta2 *  [1; a_2];
+	a_3 = sigmoid(z_3);
+
+	yt = yJ(t, :)';
+	% size(yt)	% 10 x 1
+
+	d_3 = a_3 - yt;
+	% size(d_3)	% 10 x 1
+
+
+	d_2 = Theta2' * d_3 .* sigmoidGradient([1; z_2;]);
+	% size(d_2) 	% 26 x 1
+
+	% a_2 = a2(:, t);
+	% a_3 = a3(:, t);
+
+	% d_3 = a_3 - yJ(t, :);
+
+	% d_2 = (Theta2BP' * d_3)' * sG2;
+	% d_3 = d_3(2:end);
+	d_2 = d_2(2:end);
+
+	D_1 = D_1 + d_2 * a_1';
+	D_2 = D_2 + d_3 * a_2';
+	% size(D_1)	% 25 x 401
+	% size(D_2)	% 10 x 25
+end
+
+Theta1_grad = D_1 ./ m;		
+Theta2_grad = D_2 ./ m;		
+% size(Theta1)	% 25 x 401
+% size(Theta2)	% 10 x 26
+
+
 % Part 3: Implement regularization with the cost function and gradients.
 %
 %         Hint: You can implement this around the code for
@@ -105,22 +158,17 @@ J = trace(inner) / m;
 %               and Theta2_grad from Part 2.
 %
 
+% exclude bias terms
+T1Reg = Theta1(1:end, 2:end);
+T2Reg = Theta2(1:end, 2:end);
 
+% unroll it all
+TReg = [T1Reg(:); T2Reg(:);];
 
+regParam = lambda / (2 * m);
+regTerm = regParam * sum(TReg .^ 2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+J = J + regTerm;
 
 
 % -------------------------------------------------------------
