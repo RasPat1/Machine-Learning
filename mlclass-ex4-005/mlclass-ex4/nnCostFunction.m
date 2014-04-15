@@ -39,6 +39,49 @@ Theta2_grad = zeros(size(Theta2));
 %         cost function computation is correct by verifying the cost
 %         computed in ex4.m
 %
+
+
+X = [ones(size(X, 1), 1) X];
+
+% Add input bias to X
+z2 = Theta1 * X';
+a2 = sigmoid(z2);
+z3 = Theta2 * [ones(size(a2, 2), 1) a2']';
+a3 = sigmoid(z3);
+h = a3;
+
+yJ = [y==1];
+for i = 2:size(h, 1)
+	yJ = [yJ y==i];
+end;
+
+% Loop version
+
+% Jinner = [];
+% for i = 1:size(X, 1)
+% 	yT = yJ(i, :);
+% 	hT = h(:, i);
+% 	term1 = -1 * yT * log(hT);
+% 	term2 = (1 - yT) * log(1 - hT);
+% 	inner = term1 - term2;
+% 	Jinner(i) = sum(inner);
+% end;
+
+% J = sum(Jinner) / m;
+
+
+
+term1 = -1 * yJ * log(h);
+term2 = (1 - yJ) * log(1 - h);
+inner = term1 - term2;
+
+trace rather than sum
+inner has every training example graded against every result
+We only want ex1 vs result 1 and 2 v 2 so take the diagnoal only. 
+
+J = trace(inner) / m;
+
+
 % Part 2: Implement the backpropagation algorithm to compute the gradients
 %         Theta1_grad and Theta2_grad. You should return the partial derivatives of
 %         the cost function with respect to Theta1 and Theta2 in Theta1_grad and
