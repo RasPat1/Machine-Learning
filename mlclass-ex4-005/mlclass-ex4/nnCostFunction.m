@@ -158,9 +158,10 @@ J = J + regTerm;
 
 % For gradients
 
+regGradParam = lambda / m;
 
-
-
+Theta1_grad = Theta1_grad + regGradParam * [zeros(size(Theta1_grad, 1), 1) T1Reg];
+Theta2_grad = Theta2_grad + regGradParam * [zeros(size(Theta2_grad, 1), 1) T2Reg];
 
 % -------------------------------------------------------------
 
