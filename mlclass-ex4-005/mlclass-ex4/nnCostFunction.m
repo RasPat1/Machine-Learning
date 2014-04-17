@@ -29,7 +29,6 @@ m = size(X, 1);
 J = 0;
 Theta1_grad = zeros(size(Theta1));
 Theta2_grad = zeros(size(Theta2));
-
 % ====================== YOUR CODE HERE ======================
 % Instructions: You should complete the code by working through the
 %               following parts.
@@ -101,17 +100,12 @@ J = trace(inner) / m;
 
 % yJ is y converted to column vectors for each expected result
 
-%precompute sigGrad for each layer
-% sG2 = sigmoidGradient(z2);
-
 D_1 = 0;
 D_2 = 0;
 
-Theta2BP = Theta2(1:end, 2:end); 
-
 for t = 1:m
-% 	% X is already modified with a bias layer Just pull it out
-	a_1 = X(t, 1:end)'
+% 	X is already modified with a bias layer just pull it out
+	a_1 = X(t, 1:end)';
 	% size(a_1)	% 401 x 1
 
 	z_2 = Theta1 * a_1;
@@ -129,25 +123,17 @@ for t = 1:m
 	d_2 = Theta2' * d_3 .* sigmoidGradient([1; z_2;]);
 	% size(d_2) 	% 26 x 1
 
-	% a_2 = a2(:, t);
-	% a_3 = a3(:, t);
-
-	% d_3 = a_3 - yJ(t, :);
-
-	% d_2 = (Theta2BP' * d_3)' * sG2;
-	% d_3 = d_3(2:end);
 	d_2 = d_2(2:end);
 
 	D_1 = D_1 + d_2 * a_1';
-	D_2 = D_2 + d_3 * a_2';
-	% size(D_1)	% 25 x 401
-	% size(D_2)	% 10 x 25
+	D_2 = D_2 + d_3 * [1; a_2]';
 end
 
 Theta1_grad = D_1 ./ m;		
 Theta2_grad = D_2 ./ m;		
-% size(Theta1)	% 25 x 401
-% size(Theta2)	% 10 x 26
+
+% size(Theta1_grad)	% 5 x 4
+% size(Theta2_grad)	% 3 x 5
 
 
 % Part 3: Implement regularization with the cost function and gradients.
@@ -169,6 +155,11 @@ regParam = lambda / (2 * m);
 regTerm = regParam * sum(TReg .^ 2);
 
 J = J + regTerm;
+
+% For gradients
+
+
+
 
 
 % -------------------------------------------------------------
